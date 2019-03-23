@@ -1,7 +1,8 @@
 /**
  * This is a copy of source code you can find here:
  * https://learn.adafruit.com/multi-tasking-the-arduino-part-1/a-clean-sweep and here
- * https://learn.adafruit.com/multi-tasking-the-arduino-part-2/timers
+ * https://learn.adafruit.com/multi-tasking-the-arduino-part-2/timers and here
+ * https://learn.adafruit.com/multi-tasking-the-arduino-part-2/external-interrupts
  */
 
 #include "Sweeper2.h"
@@ -49,4 +50,11 @@ void Sweeper2::Update(unsigned long currentMillis)
         increment = -increment;
       }
     }
+  }
+
+  void Sweeper2::Reset()
+  {
+    pos = 0;
+    servo.write(pos);
+    increment = abs(increment);
   }

@@ -7,7 +7,8 @@
 /**
  * This is a copy of source code you can find here:
  * https://learn.adafruit.com/multi-tasking-the-arduino-part-1/a-clean-sweep and here
- * https://learn.adafruit.com/multi-tasking-the-arduino-part-2/timers
+ * https://learn.adafruit.com/multi-tasking-the-arduino-part-2/timers and here 
+ * https://learn.adafruit.com/multi-tasking-the-arduino-part-2/external-interrupts
  */
 class Sweeper2
 {
@@ -17,6 +18,7 @@ class Sweeper2
         void Detach();
         void Update();
         void Update(unsigned long currentMillis);
+        void Reset();
     private:
         Servo servo;              // the servo
         int pos;              // current servo position 
